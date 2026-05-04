@@ -1,0 +1,57 @@
+import { experience } from '../content/experience';
+import { SectionHeading } from '../components/SectionHeading';
+import { Tag } from '../components/Tag';
+import { Reveal } from '../components/Reveal';
+
+export function Experience() {
+  return (
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="py-20 md:py-28 px-4 md:px-6"
+    >
+      <div className="max-w-6xl mx-auto">
+        <Reveal>
+          <SectionHeading eyebrow="// 03" title="Опыт работы" id="experience-heading" />
+        </Reveal>
+
+        <ol className="space-y-8" aria-label="Опыт работы в обратном хронологическом порядке">
+          {experience.map((item, i) => (
+            <Reveal as="li" key={item.company} delay={i * 100}>
+              <article className="p-6 md:p-8 rounded-xl border border-border bg-surface/50 hover:border-accent/30 transition-colors duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-fg">
+                      {item.company}
+                    </h3>
+                    <p className="text-muted text-sm mt-0.5">{item.position}</p>
+                  </div>
+                  <time className="font-mono text-xs text-muted shrink-0 sm:text-right pt-0.5">
+                    {item.period}
+                  </time>
+                </div>
+
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {item.stack.map((tech) => (
+                    <Tag key={tech} label={tech} />
+                  ))}
+                </div>
+
+                <ul className="space-y-2.5" aria-label={`Достижения в ${item.company}`}>
+                  {item.achievements.map((achievement) => (
+                    <li key={achievement.slice(0, 40)} className="flex gap-3 text-sm text-muted leading-relaxed">
+                      <span className="font-mono text-accent shrink-0 select-none" aria-hidden="true">
+                        →
+                      </span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}

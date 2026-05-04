@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/claude-code",
+      "sourceType": "github",
+      "skillPath": "plugins/frontend-design/skills/frontend-design/SKILL.md",
+      "computedHash": "e8118284a6365753790d44bb2758a6032b3af27fa84696428d9233f2be0f4e78"
+    },
+    "frontend-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-patterns/SKILL.md",
+      "computedHash": "b06e633e783acfc364cf08cf44ee0fe48ece7e8c727457b188046e5ece25836f"
+    },
+    "react": {
+      "source": "lobehub/lobehub",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/react/SKILL.md",
+      "computedHash": "a5d18e50e9a29dfb4a07f120e59bce4062f3c258f0e5f044439cd5dc27b9c6cb"
+    },
+    "react-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-patterns/SKILL.md",
+      "computedHash": "af8463c224dc911e56233db2c67bceb944099f764d77e34600cd951e85558081"
+    },
+    "react-reviewer": {
+      "source": "j7-dev/everything-github-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/react-reviewer/SKILL.md",
+      "computedHash": "c9dce2ad0e576c813aabe25f992d7702a07d50671356c09a479e173548716fbf"
+    }
+  }
+}
