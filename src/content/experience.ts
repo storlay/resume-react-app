@@ -5,6 +5,7 @@ import { nbsp } from '../utils/typography';
 const ru: ExperienceItem[] = [
   {
     company: 'Web Design Sun',
+    logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
     period: 'Сентябрь 2025 — по настоящее время',
     stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Claude'],
@@ -17,6 +18,7 @@ const ru: ExperienceItem[] = [
   },
   {
     company: 'Dev Symfony',
+    logo: '/dev-symfony-logo.svg',
     position: 'Backend Developer',
     period: 'Август 2024 — Сентябрь 2025',
     stack: ['Python', 'FastAPI', 'Django', 'DRF', 'SQLAlchemy', 'PostgreSQL', 'Redis', 'Celery', 'Pandas', 'Docker', 'CI/CD'],
@@ -31,6 +33,7 @@ const ru: ExperienceItem[] = [
   },
   {
     company: 'Guider',
+    logo: '/guider-pro-logo.jpeg',
     position: 'Python Backend Developer',
     period: 'Март 2024 — Июль 2024',
     stack: ['Python', 'Django', 'DRF', 'PostgreSQL', 'Docker'],
@@ -45,6 +48,7 @@ const ru: ExperienceItem[] = [
 const en: ExperienceItem[] = [
   {
     company: 'Web Design Sun',
+    logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
     period: 'Sep 2025 — Present',
     stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Claude'],
@@ -57,6 +61,7 @@ const en: ExperienceItem[] = [
   },
   {
     company: 'Dev Symfony',
+    logo: '/dev-symfony-logo.svg',
     position: 'Backend Developer',
     period: 'Aug 2024 — Sep 2025',
     stack: ['Python', 'FastAPI', 'Django', 'DRF', 'SQLAlchemy', 'PostgreSQL', 'Redis', 'Celery', 'Pandas', 'Docker', 'CI/CD'],
@@ -71,6 +76,7 @@ const en: ExperienceItem[] = [
   },
   {
     company: 'Guider',
+    logo: '/guider-pro-logo.jpeg',
     position: 'Python Backend Developer',
     period: 'Mar 2024 — Jul 2024',
     stack: ['Python', 'Django', 'DRF', 'PostgreSQL', 'Docker'],

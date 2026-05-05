@@ -69,6 +69,7 @@ export function Hero() {
             </a>
           </div>
         </Reveal>
+
       </div>
     </section>
   );

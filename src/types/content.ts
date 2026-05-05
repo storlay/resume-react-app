@@ -33,6 +33,7 @@ export interface StackGroup {
 
 export interface ExperienceItem {
   company: string;
+  logo?: string;
   position: string;
   period: string;
   stack: string[];

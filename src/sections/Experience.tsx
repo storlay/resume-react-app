@@ -23,12 +23,22 @@ export function Experience() {
           {experience.map((item, i) => (
             <Reveal as="li" key={item.company} delay={i * 100}>
               <article className="p-6 md:p-8 rounded-xl border border-border bg-surface/50 hover:border-accent/30 transition-colors duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-fg">
-                      {item.company}
-                    </h3>
-                    <p className="text-muted text-sm mt-0.5">{item.position}</p>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                  <div className="flex items-center gap-3 min-w-0">
+                    {item.logo && (
+                      <img
+                        src={item.logo}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-11 w-11 rounded-md object-contain bg-white p-1 shrink-0 border border-border"
+                      />
+                    )}
+                    <div className="min-w-0">
+                      <h3 className="text-xl font-semibold text-fg">
+                        {item.company}
+                      </h3>
+                      <p className="text-muted text-sm mt-0.5">{item.position}</p>
+                    </div>
                   </div>
                   <time className="font-mono text-xs text-muted shrink-0 sm:text-right pt-0.5">
                     {item.period}
