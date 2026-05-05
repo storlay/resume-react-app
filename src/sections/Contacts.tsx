@@ -1,10 +1,13 @@
-import { profile } from '../content/profile';
+import { profileByLocale } from '../content/profile';
 import { SectionHeading } from '../components/SectionHeading';
 import { IconLink } from '../components/IconLink';
 import { Reveal } from '../components/Reveal';
-import { nbsp } from '../utils/typography';
+import { useLocale } from '../i18n/useLocale';
 
 export function Contacts() {
+  const { locale, t } = useLocale();
+  const profile = profileByLocale[locale];
+
   return (
     <section
       id="contacts"
@@ -13,7 +16,7 @@ export function Contacts() {
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <SectionHeading eyebrow="// 04" title="Контакты" id="contacts-heading" />
+          <SectionHeading eyebrow={t.sections.contactsEyebrow} title={t.sections.contacts} id="contacts-heading" />
         </Reveal>
 
         <div className="grid sm:grid-cols-2 gap-8 md:gap-12 items-stretch">
@@ -33,13 +36,13 @@ export function Contacts() {
             <div className="flex flex-col gap-4 w-full">
               <div className="flex-1 p-6 rounded-xl border border-border bg-surface/50">
                 <p className="font-sans text-xs text-accent tracking-wider uppercase mb-3">
-                  Доступность
+                  {t.contacts.availability}
                 </p>
                 <p className="text-sm text-muted leading-relaxed">
                   {profile.location} · {profile.timezone}
                 </p>
                 <p className="text-sm text-muted mt-2">
-                  {nbsp('Открыт к time-shift графику под UTC+3')}
+                  {t.contacts.timeShift}
                 </p>
               </div>
 
@@ -53,7 +56,7 @@ export function Contacts() {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                Скачать резюме (PDF)
+                {t.contacts.downloadResume}
               </a>
             </div>
           </Reveal>

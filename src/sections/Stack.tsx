@@ -1,9 +1,13 @@
-import { stack } from '../content/stack';
+import { stackByLocale } from '../content/stack';
 import { SectionHeading } from '../components/SectionHeading';
 import { Tag } from '../components/Tag';
 import { Reveal } from '../components/Reveal';
+import { useLocale } from '../i18n/useLocale';
 
 export function Stack() {
+  const { locale, t } = useLocale();
+  const stack = stackByLocale[locale];
+
   return (
     <section
       id="stack"
@@ -12,7 +16,7 @@ export function Stack() {
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <SectionHeading eyebrow="// 02" title="Стек" id="stack-heading" />
+          <SectionHeading eyebrow={t.sections.stackEyebrow} title={t.sections.stack} id="stack-heading" />
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">

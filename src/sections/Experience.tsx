@@ -1,9 +1,13 @@
-import { experience } from '../content/experience';
+import { experienceByLocale } from '../content/experience';
 import { SectionHeading } from '../components/SectionHeading';
 import { Tag } from '../components/Tag';
 import { Reveal } from '../components/Reveal';
+import { useLocale } from '../i18n/useLocale';
 
 export function Experience() {
+  const { locale, t } = useLocale();
+  const experience = experienceByLocale[locale];
+
   return (
     <section
       id="experience"
@@ -12,10 +16,10 @@ export function Experience() {
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <SectionHeading eyebrow="// 03" title="Опыт работы" id="experience-heading" />
+          <SectionHeading eyebrow={t.sections.experienceEyebrow} title={t.sections.experience} id="experience-heading" />
         </Reveal>
 
-        <ol className="space-y-8" aria-label="Опыт работы в обратном хронологическом порядке">
+        <ol className="space-y-8" aria-label={t.experience.listLabel}>
           {experience.map((item, i) => (
             <Reveal as="li" key={item.company} delay={i * 100}>
               <article className="p-6 md:p-8 rounded-xl border border-border bg-surface/50 hover:border-accent/30 transition-colors duration-300">
@@ -37,7 +41,7 @@ export function Experience() {
                   ))}
                 </div>
 
-                <ul className="space-y-2.5" aria-label={`Достижения в ${item.company}`}>
+                <ul className="space-y-2.5" aria-label={t.experience.achievementsLabel(item.company)}>
                   {item.achievements.map((achievement) => (
                     <li key={achievement.slice(0, 40)} className="flex gap-3 text-sm text-muted leading-relaxed">
                       <span className="font-mono text-accent shrink-0 select-none" aria-hidden="true">

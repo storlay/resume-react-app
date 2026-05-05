@@ -1,7 +1,11 @@
-import { profile } from '../content/profile';
+import { profileByLocale } from '../content/profile';
 import { Reveal } from '../components/Reveal';
+import { useLocale } from '../i18n/useLocale';
 
 export function Hero() {
+  const { locale, t } = useLocale();
+  const profile = profileByLocale[locale];
+
   return (
     <section
       id="hero"
@@ -49,7 +53,7 @@ export function Hero() {
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.286c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.935z" />
               </svg>
-              Написать в Telegram
+              {t.hero.writeTelegram}
             </a>
             <a
               href={profile.resumeUrl}
@@ -61,7 +65,7 @@ export function Hero() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Скачать PDF
+              {t.hero.downloadPdf}
             </a>
           </div>
         </Reveal>

@@ -1,8 +1,12 @@
-import { profile } from '../content/profile';
+import { profileByLocale } from '../content/profile';
 import { SectionHeading } from '../components/SectionHeading';
 import { Reveal } from '../components/Reveal';
+import { useLocale } from '../i18n/useLocale';
 
 export function About() {
+  const { locale, t } = useLocale();
+  const profile = profileByLocale[locale];
+
   return (
     <section
       id="about"
@@ -11,7 +15,7 @@ export function About() {
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <SectionHeading eyebrow="// 01" title="Обо мне" id="about-heading" />
+          <SectionHeading eyebrow={t.sections.aboutEyebrow} title={t.sections.about} id="about-heading" />
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
@@ -22,7 +26,7 @@ export function About() {
           <Reveal delay={160}>
             <div>
               <p className="font-sans text-xs text-accent tracking-widest uppercase mb-4">
-                Языки
+                {t.about.languages}
               </p>
               <div className="space-y-3">
                 {profile.languages.map((lang) => (

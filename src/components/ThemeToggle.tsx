@@ -1,15 +1,19 @@
+import { useT } from '../i18n/useLocale';
+
 interface ThemeToggleProps {
   theme: 'dark' | 'light';
   onToggle: () => void;
 }
 
 export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
+  const t = useT();
+
   return (
     <button
       type="button"
       onClick={onToggle}
       aria-pressed={theme === 'dark'}
-      aria-label="Переключить тему"
+      aria-label={t.a11y.toggleTheme}
       className="p-2 rounded-md text-muted hover:text-fg hover:bg-surface transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-accent"
     >
       {theme === 'dark' ? (
