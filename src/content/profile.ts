@@ -29,7 +29,8 @@ const sharedContacts: Profile['contacts'] = [
   },
 ];
 
-const resumeUrl = '/Dmitrii-Ivanov-Python-Backend-Developer.pdf';
+const resumeUrlRu = '/Dmitrii-Ivanov-Python-Backend-Developer.pdf';
+const resumeUrlEn = '/Dmitrii-Ivanov-Python-Backend-Developer-EN.pdf';
 
 export const profileByLocale: Record<Locale, Profile> = {
   ru: {
@@ -55,7 +56,7 @@ export const profileByLocale: Record<Locale, Profile> = {
       { code: 'ES', level: 'A2' },
     ],
     contacts: sharedContacts,
-    resumeUrl,
+    resumeUrl: resumeUrlRu,
   },
   en: {
     name: 'Dmitrii Ivanov',
@@ -77,6 +78,6 @@ export const profileByLocale: Record<Locale, Profile> = {
       { code: 'ES', level: 'A2' },
     ],
     contacts: sharedContacts,
-    resumeUrl,
+    resumeUrl: resumeUrlEn,
   },
 };
