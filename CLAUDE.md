@@ -1,47 +1,84 @@
-# React Landing Page
+# CLAUDE.md
 
-Лендинг на React + TypeScript.
+## 1. Think Before Coding
 
-## Доступные агенты (`.claude/agents/`)
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
 
-- `planner` — пошаговый план реализации, трейд-оффы.
-- `code-architect` — архитектурные решения, структура, выбор библиотек.
-- `security-reviewer` — проверка изменений на уязвимости.
+Before implementing:
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them - don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
 
-## Доступные скиллы (`.claude/skills/`)
+## 2. Simplicity First
 
-- `react` — React-компоненты, layout, роутинг, фронтенд-фичи.
-- `react-patterns` — современные паттерны React: хуки, композиция, perf, TypeScript best practices.
-- `frontend-patterns` — state, perf, UI best practices.
-- `frontend-design` — нестандартный продакшн-уровень дизайна (без «AI-generic»).
-- `react-reviewer` — ревью React/TSX: хуки, perf, a11y, современные паттерны.
+**Minimum code that solves the problem. Nothing speculative.**
 
-## Правила маршрутизации (применять почти всегда)
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
 
-1. **Перед планированием задачи** (новая секция, фича, рефакторинг) → агент `planner`.
-2. **Перед написанием/правкой React-компонентов** → скиллы `react` + `react-patterns` + `frontend-patterns`.
-3. **Перед созданием UI лендинга** (hero, секции, CTA, формы) → обязательно скилл `frontend-design`.
-4. **Перед архитектурными решениями** (структура папок, слои, библиотеки) → агент `code-architect`.
-5. **После любого изменения `.tsx`/React-кода** → скилл `react-reviewer`. Это обязательный шаг.
-6. **Перед коммитом/завершением задачи** → агент `security-reviewer` по изменённым файлам.
+Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
-## Дефолты по стеку
+## 3. Surgical Changes
 
-- React 18 + TypeScript, только функциональные компоненты и хуки.
-- Без `any`, без классовых компонентов, без устаревших паттернов.
-- A11y по умолчанию: семантический HTML, `alt`, `aria-*`, видимый фокус.
-- Перформанс: мемоизация только по необходимости, `lazy` для тяжёлых секций.
+**Touch only what you must. Clean up only your own mess.**
 
-## Что делать почти всегда
+When editing existing code:
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it - don't delete it.
 
-- Сначала короткий план → подтверждение пользователя → правки.
-- Редактировать существующие файлы; новые — только если без них нельзя.
-- Без комментариев-«что делает код». Только «почему», если неочевидно.
-- Без эмодзи в коде и ответах, если не попросили.
-- Краткие ответы на русском.
+When your changes create orphans:
+- Remove imports/variables/functions that YOUR changes made unused.
+- Don't remove pre-existing dead code unless asked.
 
-## Чего не делать
+The test: Every changed line should trace directly to the user's request.
 
-- Не запускать `/ultrareview`, `/security-review` и другие тяжёлые ревью без явной просьбы.
-- Не ставить новые зависимости без согласования.
-- Не добавлять фичи/абстракции «на будущее».
+## 4. Goal-Driven Execution
+
+**Define success criteria. Loop until verified.**
+
+Transform tasks into verifiable goals:
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
+
+For multi-step tasks, state a brief plan:
+```
+1. [Step] → verify: [check]
+2. [Step] → verify: [check]
+3. [Step] → verify: [check]
+```
+
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+---
+
+**These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
+---
+
+# Project: React Landing Page
+
+React 18 + TypeScript. Reply concisely in Russian.
+
+## Required steps
+
+- After any change to `.tsx` — `react-reviewer` skill.
+- Before commit — `security-reviewer` agent on changed files.
+
+## Stack
+
+- Function components and hooks only. No `any`, no class components.
+- A11y: semantic HTML, `alt`, `aria-*`, visible focus.
+- `lazy` for heavy sections; memoize only when needed.
+
+## Don't do without explicit request
+
+- `/ultrareview`, `/security-review`.
+- Installing new dependencies.
+- Emojis in code or replies.
