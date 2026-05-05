@@ -1,20 +1,18 @@
-import { ThemeToggle } from './ThemeToggle';
-
-interface FooterProps {
-  theme: 'dark' | 'light';
-  onToggle: () => void;
-}
+import { useLocale } from '../i18n/useLocale';
+import { profileByLocale } from '../content/profile';
 
 const YEAR = new Date().getFullYear();
 
-export function Footer({ theme, onToggle }: FooterProps) {
+export function Footer() {
+  const { locale } = useLocale();
+  const name = profileByLocale[locale].name;
+
   return (
     <footer className="border-t border-border px-4 md:px-6 py-6">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <div className="max-w-6xl mx-auto">
         <p className="font-mono text-xs text-muted">
-          © {YEAR} Дмитрий Иванов
+          © {YEAR} {name}
         </p>
-        <ThemeToggle theme={theme} onToggle={onToggle} />
       </div>
     </footer>
   );
