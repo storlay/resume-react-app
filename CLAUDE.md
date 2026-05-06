@@ -71,6 +71,11 @@ React 18 + TypeScript. Reply concisely in Russian.
 - After any change to `.tsx` — `react-reviewer` skill.
 - Before commit — `security-reviewer` agent on changed files.
 
+## Commits
+
+- Commit messages must be 10 words or fewer.
+- No `Co-Authored-By: Claude` trailer or any Claude mentions.
+
 ## Stack
 
 - Function components and hooks only. No `any`, no class components.
