@@ -8,7 +8,7 @@ const ru: ExperienceItem[] = [
     logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
     period: 'Сентябрь 2025 — по настоящее время',
-    stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Claude'],
+    stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Docker', 'Claude Code'],
     achievements: [
       nbsp('Спроектировал и разработал ключевой функционал для командной работы (управление пользователями, ролями и подписками), что позволило продукту выйти в B2B-сегмент и привело к росту выручки.'),
       nbsp('Интегрировал платежный шлюз Stripe, обеспечив приём мультивалютных платежей и автоматизировав процесс подписки.'),
@@ -51,7 +51,7 @@ const en: ExperienceItem[] = [
     logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
     period: 'Sep 2025 — Present',
-    stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Claude'],
+    stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Docker', 'Claude Code'],
     achievements: [
       'Designed and shipped core teamwork features (user, role and subscription management), which unlocked the B2B segment and drove revenue growth.',
       'Integrated the Stripe payment gateway, enabling multi-currency payments and automating the subscription flow.',
