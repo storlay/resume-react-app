@@ -22,6 +22,10 @@ export const stackByLocale: Record<Locale, StackGroup[]> = {
       title: 'Документация и процессы',
       items: ['OpenAPI/Swagger', 'Postman', 'Scrum', 'Kanban'],
     },
+    {
+      title: 'AI-инструменты',
+      items: ['Claude Code', 'MCP', 'Subagents', 'Prompt engineering'],
+    },
   ],
   en: [
     { title: 'Languages', items: ['Python', 'Go', 'SQL'] },
@@ -42,6 +46,10 @@ export const stackByLocale: Record<Locale, StackGroup[]> = {
     {
       title: 'Docs & Process',
       items: ['OpenAPI/Swagger', 'Postman', 'Scrum', 'Kanban'],
+    },
+    {
+      title: 'AI tooling',
+      items: ['Claude Code', 'MCP', 'Subagents', 'Prompt engineering'],
     },
   ],
 };
