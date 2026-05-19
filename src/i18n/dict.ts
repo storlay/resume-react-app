@@ -35,6 +35,7 @@ export interface Dict {
   };
   contacts: {
     availability: string;
+    availableForWork: string;
     timeShift: string;
     openResume: string;
     openResumeAria: string;
@@ -74,6 +75,7 @@ const ru: Dict = {
   },
   contacts: {
     availability: 'Доступность',
+    availableForWork: 'Открыт к предложениям',
     timeShift: 'Открыт к time-shift графику под UTC+3',
     openResume: 'Открыть резюме (PDF)',
     openResumeAria: 'Открыть резюме (PDF, новая вкладка)',
@@ -113,6 +115,7 @@ const en: Dict = {
   },
   contacts: {
     availability: 'Availability',
+    availableForWork: 'Open to opportunities',
     timeShift: 'Open to time-shifted schedule overlapping UTC+3',
     openResume: 'Open resume (PDF)',
     openResumeAria: 'Open resume (PDF, new tab)',

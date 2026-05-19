@@ -22,6 +22,12 @@ const sharedContacts: Profile['contacts'] = [
     display: 'linkedin.com/in/storlay',
   },
   {
+    kind: 'github',
+    label: 'GitHub',
+    href: 'https://github.com/storlay',
+    display: 'github.com/storlay',
+  },
+  {
     kind: 'phone',
     label: 'Phone',
     href: 'tel:+541168136367',

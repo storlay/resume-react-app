@@ -21,7 +21,7 @@ export function Contacts() {
 
         <div className="grid sm:grid-cols-2 gap-8 md:gap-12 items-stretch">
           <Reveal delay={80}>
-            <div className="grid grid-cols-2 gap-3 h-full">
+            <div className="grid grid-cols-2 gap-3 h-full [&>a:last-child:nth-child(odd)]:col-span-2">
               {profile.contacts.map((contact) => (
                 <IconLink
                   key={contact.kind}
@@ -34,10 +34,19 @@ export function Contacts() {
 
           <Reveal delay={160} className="flex">
             <div className="flex flex-col gap-4 w-full">
-              <div className="flex-1 p-6 rounded-xl border border-border bg-surface/50">
+              <div className="flex-1 flex flex-col justify-center p-6 rounded-xl border border-border bg-surface/50">
                 <p className="font-sans text-xs text-accent tracking-wider uppercase mb-3">
                   {t.contacts.availability}
                 </p>
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="relative flex w-2.5 h-2.5" aria-hidden="true">
+                    <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                    <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                  </span>
+                  <span className="text-sm font-medium text-fg">
+                    {t.contacts.availableForWork}
+                  </span>
+                </div>
                 <p className="text-sm text-muted leading-relaxed">
                   {profile.location} · {profile.timezone}
                 </p>

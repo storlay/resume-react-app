@@ -7,7 +7,7 @@ export interface Language {
 }
 
 export interface ContactLink {
-  kind: 'email' | 'phone' | 'linkedin' | 'telegram' | 'resume';
+  kind: 'email' | 'phone' | 'linkedin' | 'telegram' | 'github' | 'resume';
   label: string;
   href: string;
   display: string;
