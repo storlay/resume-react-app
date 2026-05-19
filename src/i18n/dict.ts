@@ -29,6 +29,8 @@ export interface Dict {
   experience: {
     listLabel: string;
     achievementsLabel: (company: string) => string;
+    recommendationLetter: string;
+    recommendationLetterAria: (company: string) => string;
   };
   contacts: {
     availability: string;
@@ -64,6 +66,8 @@ const ru: Dict = {
   experience: {
     listLabel: 'Опыт работы в обратном хронологическом порядке',
     achievementsLabel: (company) => `Достижения в ${company}`,
+    recommendationLetter: 'Рекомендательное письмо (PDF)',
+    recommendationLetterAria: (company) => `Открыть рекомендательное письмо от ${company} (PDF, новая вкладка)`,
   },
   contacts: {
     availability: 'Доступность',
@@ -99,6 +103,8 @@ const en: Dict = {
   experience: {
     listLabel: 'Work experience in reverse chronological order',
     achievementsLabel: (company) => `Achievements at ${company}`,
+    recommendationLetter: 'Recommendation letter (PDF)',
+    recommendationLetterAria: (company) => `Open recommendation letter from ${company} (PDF, new tab)`,
   },
   contacts: {
     availability: 'Availability',

@@ -61,6 +61,48 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
+
+                {item.recommendationLetter && (
+                  <div className="mt-5 pt-4 border-t border-border/60">
+                    <a
+                      href={item.recommendationLetter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.experience.recommendationLetterAria(item.company)}
+                      className="inline-flex items-center gap-2 text-sm font-mono text-muted hover:text-accent transition-colors duration-200"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-4 h-4 shrink-0"
+                        aria-hidden="true"
+                      >
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                      </svg>
+                      <span>{t.experience.recommendationLetter}</span>
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-3 h-3 shrink-0 opacity-70"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}

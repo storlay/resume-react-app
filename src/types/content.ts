@@ -38,4 +38,5 @@ export interface ExperienceItem {
   period: string;
   stack: string[];
   achievements: string[];
+  recommendationLetter?: string;
 }

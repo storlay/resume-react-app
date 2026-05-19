@@ -7,7 +7,7 @@ const ru: ExperienceItem[] = [
     company: 'Web Design Sun',
     logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
-    period: 'Сентябрь 2025 — по настоящее время',
+    period: 'Сентябрь 2025 — Май 2026',
     stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Docker', 'Claude Code'],
     achievements: [
       nbsp('Спроектировал и разработал ключевой функционал для командной работы (управление пользователями, ролями и подписками), что позволило продукту выйти в B2B-сегмент и привело к росту выручки.'),
@@ -15,6 +15,7 @@ const ru: ExperienceItem[] = [
       nbsp('Спроектировал и внедрил интеграцию с Canva API, позволив автоматически проверять студенческие работы на плагиат и использование AI, что сократило среднее время проверки и повысило пропускную способность платформы.'),
       nbsp('Повысил стабильность продукта, сократив количество production-инцидентов на ~25% за счёт внедрения unit-тестов (покрытие выросло с 0 до 80%) и настройки healthcheck-эндпоинтов.'),
     ],
+    recommendationLetter: '/dmitrii-ivanov-wds-recommendation-letter.pdf',
   },
   {
     company: 'Dev Symfony',
@@ -50,7 +51,7 @@ const en: ExperienceItem[] = [
     company: 'Web Design Sun',
     logo: '/web-design-sun-logo.svg',
     position: 'Software Engineer',
-    period: 'Sep 2025 — Present',
+    period: 'Sep 2025 — May 2026',
     stack: ['Python', 'Go', 'FastAPI', 'Django', 'DRF', 'PostgreSQL', 'Redis', 'Celery', 'Pytest', 'Docker', 'Claude Code'],
     achievements: [
       'Designed and shipped core teamwork features (user, role and subscription management), which unlocked the B2B segment and drove revenue growth.',
@@ -58,6 +59,7 @@ const en: ExperienceItem[] = [
       'Designed and shipped a Canva API integration that auto-checks student work for plagiarism and AI usage, cutting average review time and increasing platform throughput.',
       'Improved product stability — reduced production incidents by ~25% by introducing unit tests (coverage from 0 to 80%) and setting up healthcheck endpoints.',
     ],
+    recommendationLetter: '/dmitrii-ivanov-wds-recommendation-letter.pdf',
   },
   {
     company: 'Dev Symfony',
