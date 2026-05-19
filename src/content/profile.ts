@@ -29,8 +29,8 @@ const sharedContacts: Profile['contacts'] = [
   },
 ];
 
-const resumeUrlRu = '/dmitrii-ivanov-python-backend-developer.pdf';
-const resumeUrlEn = '/dmitrii-ivanov-python-backend-developer-en.pdf';
+const resumeUrlRu = import.meta.env.VITE_RESUME_URL_RU;
+const resumeUrlEn = import.meta.env.VITE_RESUME_URL_EN;
 
 export const profileByLocale: Record<Locale, Profile> = {
   ru: {

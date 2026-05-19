@@ -2,6 +2,8 @@ import type { ExperienceItem } from '../types/content';
 import type { Locale } from '../i18n/dict';
 import { nbsp } from '../utils/typography';
 
+const recommendationLetterWds = import.meta.env.VITE_RECOMMENDATION_LETTER_WDS_URL;
+
 const ru: ExperienceItem[] = [
   {
     company: 'Web Design Sun',
@@ -15,7 +17,7 @@ const ru: ExperienceItem[] = [
       nbsp('Спроектировал и внедрил интеграцию с Canva API, позволив автоматически проверять студенческие работы на плагиат и использование AI, что сократило среднее время проверки и повысило пропускную способность платформы.'),
       nbsp('Повысил стабильность продукта, сократив количество production-инцидентов на ~25% за счёт внедрения unit-тестов (покрытие выросло с 0 до 80%) и настройки healthcheck-эндпоинтов.'),
     ],
-    recommendationLetter: '/dmitrii-ivanov-wds-recommendation-letter.pdf',
+    recommendationLetter: recommendationLetterWds,
   },
   {
     company: 'Dev Symfony',
@@ -59,7 +61,7 @@ const en: ExperienceItem[] = [
       'Designed and shipped a Canva API integration that auto-checks student work for plagiarism and AI usage, cutting average review time and increasing platform throughput.',
       'Improved product stability — reduced production incidents by ~25% by introducing unit tests (coverage from 0 to 80%) and setting up healthcheck endpoints.',
     ],
-    recommendationLetter: '/dmitrii-ivanov-wds-recommendation-letter.pdf',
+    recommendationLetter: recommendationLetterWds,
   },
   {
     company: 'Dev Symfony',

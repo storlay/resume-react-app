@@ -21,7 +21,8 @@ export interface Dict {
   };
   hero: {
     writeTelegram: string;
-    downloadPdf: string;
+    openResume: string;
+    openResumeAria: string;
   };
   about: {
     languages: string;
@@ -35,7 +36,8 @@ export interface Dict {
   contacts: {
     availability: string;
     timeShift: string;
-    downloadResume: string;
+    openResume: string;
+    openResumeAria: string;
   };
   a11y: {
     toggleTheme: string;
@@ -58,7 +60,8 @@ const ru: Dict = {
   },
   hero: {
     writeTelegram: 'Написать в Telegram',
-    downloadPdf: 'Скачать PDF',
+    openResume: 'Открыть резюме (PDF)',
+    openResumeAria: 'Открыть резюме (PDF, новая вкладка)',
   },
   about: {
     languages: 'Языки',
@@ -72,7 +75,8 @@ const ru: Dict = {
   contacts: {
     availability: 'Доступность',
     timeShift: 'Открыт к time-shift графику под UTC+3',
-    downloadResume: 'Скачать резюме (PDF)',
+    openResume: 'Открыть резюме (PDF)',
+    openResumeAria: 'Открыть резюме (PDF, новая вкладка)',
   },
   a11y: {
     toggleTheme: 'Переключить тему',
@@ -95,7 +99,8 @@ const en: Dict = {
   },
   hero: {
     writeTelegram: 'Message on Telegram',
-    downloadPdf: 'Download PDF',
+    openResume: 'Open resume (PDF)',
+    openResumeAria: 'Open resume (PDF, new tab)',
   },
   about: {
     languages: 'Languages',
@@ -109,7 +114,8 @@ const en: Dict = {
   contacts: {
     availability: 'Availability',
     timeShift: 'Open to time-shifted schedule overlapping UTC+3',
-    downloadResume: 'Download resume (PDF)',
+    openResume: 'Open resume (PDF)',
+    openResumeAria: 'Open resume (PDF, new tab)',
   },
   a11y: {
     toggleTheme: 'Toggle theme',
